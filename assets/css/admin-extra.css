@@ -1,0 +1,560 @@
+/* ============================================================
+   eLearning College — ADMIN EXTRA
+   ============================================================ */
+
+.admin-body {
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.admin-sidebar {
+    position: relative;
+}
+
+
+/* LOGO */
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+
+    transition: transform .25s ease;
+}
+
+.admin-logo:hover {
+    transform: translateX(2px);
+}
+
+.admin-logo .logo-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb62e,
+            #f39a08
+        );
+
+    box-shadow:
+        0 8px 18px rgba(245,166,35,.25);
+
+    font-size: 21px;
+}
+
+.admin-logo .logo-text {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+.admin-logo .logo-text b {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9ba7b8;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ============================================================
+   SECTION LABEL
+   ============================================================ */
+
+.side-label {
+    margin-top: 25px;
+    margin-bottom: 8px;
+
+    color: #718096;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* ============================================================
+   SIDEBAR LINK
+   ============================================================ */
+
+.side-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 45px;
+
+    gap: 11px;
+
+    margin: 3px 0;
+    padding: 0 13px;
+
+    border-radius: 12px;
+
+    color: #aeb9c9;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.side-link:hover {
+    color: #ffffff;
+
+    background: rgba(255,255,255,.055);
+
+    transform: translateX(3px);
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.side-icon {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 27px;
+
+    border-radius: 8px;
+
+    color: #8e9bad;
+
+    font-size: 12px;
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+
+/* ============================================================
+   ACTIVE
+   ============================================================ */
+
+.side-link.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,166,35,.19),
+            rgba(245,166,35,.055)
+        );
+
+    box-shadow:
+        inset 0 0 0 1px rgba(245,166,35,.07);
+}
+
+
+.side-link.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 9px;
+
+    width: 3px;
+    height: 27px;
+
+    border-radius: 0 6px 6px 0;
+
+    background: #f5a623;
+
+    box-shadow:
+        0 0 12px rgba(245,166,35,.5);
+}
+
+
+.side-link.active .side-icon {
+    color: #f5a623;
+
+    background: rgba(245,166,35,.10);
+}
+
+
+/* ============================================================
+   EXTERNAL ICON
+   ============================================================ */
+
+.side-external {
+    margin-left: auto;
+
+    color: #687588;
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   LOGOUT
+   ============================================================ */
+
+.logout-link {
+    margin-top: 12px;
+
+    color: #e99a9a;
+}
+
+.logout-link .side-icon {
+    color: #e66d6d;
+}
+
+.logout-link:hover {
+    color: #ff9b9b;
+
+    background: rgba(239,83,80,.08);
+}
+
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+
+.adminbar {
+    backdrop-filter: blur(15px);
+}
+
+
+/* PAGE HEADING */
+
+.page-heading small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #f5a623;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.page-heading h1 {
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+}
+
+
+/* ============================================================
+   VIEW WEBSITE
+   ============================================================ */
+
+.view-site-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    min-height: 39px;
+
+    padding: 0 13px;
+
+    border: 1px solid #e5e9ef;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #536174;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+.view-site-btn:hover {
+    color: #f5a623;
+
+    border-color: #f5d18e;
+
+    background: #fffaf1;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   USER PILL
+   ============================================================ */
+
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-height: 39px;
+
+    padding: 0 11px;
+
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #39475a;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.user-avatar {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb52e,
+            #f29a08
+        );
+
+    font-size: 10px;
+}
+
+
+.user-arrow {
+    margin-left: 3px;
+
+    color: #a0a9b6;
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+    .adminbar-right {
+        gap: 7px;
+    }
+
+    .view-site-btn span {
+        display: none;
+    }
+
+    .view-site-btn {
+        width: 39px;
+
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .user-pill > span:not(.user-avatar) {
+        display: none;
+    }
+
+    .user-arrow {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-heading h1 {
+        font-size: 18px;
+    }
+
+}
+
+/* ============================================================
+   SYSTEM ADMINISTRATOR ACCOUNT
+   Logout lives inside this account menu.
+   ============================================================ */
+
+.admin-account{
+    position:relative;
+}
+
+.admin-account summary{
+    list-style:none;
+    cursor:pointer;
+}
+
+.admin-account summary::-webkit-details-marker{
+    display:none;
+}
+
+.admin-account[open] .user-arrow{
+    transform:rotate(180deg);
+}
+
+.user-pill{
+    min-width:220px;
+}
+
+.user-info{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    line-height:1.15;
+}
+
+.user-info .user-name{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:145px;
+}
+
+.user-info small{
+    margin-top:3px;
+    color:#8a95a5;
+    font-size:9px;
+    font-weight:700;
+}
+
+.account-menu{
+    position:absolute;
+    z-index:1000;
+    top:calc(100% + 9px);
+    right:0;
+    width:245px;
+    padding:10px;
+    border:1px solid #e6eaf0;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 18px 45px rgba(15,23,42,.14);
+    animation:accountDrop .16s ease-out;
+}
+
+@keyframes accountDrop{
+    from{opacity:0;transform:translateY(-5px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.account-menu-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:8px;
+}
+
+.account-menu-head strong{
+    display:block;
+    color:#172033;
+    font-size:11px;
+}
+
+.account-menu-head small{
+    display:block;
+    margin-top:3px;
+    color:#8a95a5;
+    font-size:9px;
+}
+
+.account-menu-avatar{
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    flex:0 0 36px;
+    border-radius:11px;
+    color:#172033;
+    background:linear-gradient(135deg,#ffd16f,#f5a623);
+}
+
+.account-menu-line{
+    height:1px;
+    margin:6px 3px;
+    background:#edf0f4;
+}
+
+.account-logout{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-height:40px;
+    padding:0 10px;
+    border-radius:10px;
+    color:#b33434;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:800;
+    transition:.18s ease;
+}
+
+.account-logout i{
+    width:22px;
+    text-align:center;
+}
+
+.account-logout:hover{
+    background:#fff0f0;
+    color:#dc4444;
+}
+
+@media(max-width:768px){
+    .user-pill{
+        min-width:auto;
+    }
+
+    .user-info{
+        display:none;
+    }
+
+    .account-menu{
+        right:0;
+        width:225px;
+    }
+}
+
+/* 2026 Admin visual refresh — shared brand language */
+.admin-body{background:#f4f8fe!important;color:#152d55}.admin-sidebar{background:linear-gradient(180deg,#082552 0%,#103d7b 100%)!important;box-shadow:18px 0 40px rgba(8,37,82,.08)}.admin-logo-image{display:flex!important;justify-content:center;align-items:center;padding:18px 10px 15px!important}.admin-logo-image img{display:block;width:190px;max-width:100%;height:auto;background:#fff;border-radius:14px;padding:7px 10px}.admin-logo-image:hover{transform:none}.admin-sidebar .side-label{color:#8fb1dc!important}.admin-sidebar .side-link{border-radius:13px!important;color:#bfd0e8}.admin-sidebar .side-link:hover{background:rgba(255,255,255,.08)!important;color:#fff}.admin-sidebar .side-link.active{background:linear-gradient(90deg,rgba(23,111,229,.6),rgba(23,111,229,.1))!important}.admin-sidebar .side-link.active .side-icon{color:#fff!important;background:rgba(255,255,255,.08)!important}.admin-sidebar .side-link.active::before{background:#ff8a16!important}.admin-main{background:transparent!important}.adminbar{background:rgba(244,248,254,.88)!important;border-bottom:1px solid #e1e8f3!important}.page-heading small{color:#176fe5!important}.page-heading h1{color:#102f61!important}.admincard{border:1px solid #e2e9f4!important;box-shadow:0 12px 30px rgba(16,47,97,.055)!important;border-radius:20px!important}.stat-card{border:1px solid #e2e9f4!important;box-shadow:0 10px 26px rgba(16,47,97,.05)!important;border-radius:18px!important}.quick-action{border-color:#e2e9f4!important;border-radius:16px!important}.quick-action:hover{border-color:#b9d4f7!important;box-shadow:0 10px 24px rgba(16,47,97,.07)!important}.btn,.btn-primary{border-radius:12px!important;background:linear-gradient(135deg,#ff921d,#f87806)!important;box-shadow:0 8px 18px rgba(255,127,10,.18)}.btn.outline,.btn-outline{background:#fff!important;color:#176fe5!important;border-color:#c8dbf3!important;box-shadow:none}.people-manager-card select:focus,.people-manager-card input:focus{border-color:#5ea1f2;box-shadow:0 0 0 4px rgba(23,111,229,.08)}.people-manager-card .page-description{color:#718096}
+@media(max-width:900px){.admin-logo-image img{width:175px}}

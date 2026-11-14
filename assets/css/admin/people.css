@@ -1,0 +1,181 @@
+/* =========================================================
+   eLearning College — People / Teachers
+   Compact, modern and mobile-friendly teacher photo UI
+========================================================= */
+
+.people-manager-card {
+    overflow: hidden;
+}
+
+.people-manager-card form {
+    max-width: 100%;
+}
+
+.teacher-photo-upload {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    padding: 14px;
+    margin: 4px 0 24px;
+    border: 1px solid #e7edf5;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fbfdff 0%, #f6f9fd 100%);
+}
+
+.teacher-photo-current {
+    width: 104px;
+    height: 104px;
+    min-width: 104px;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dfe7f1;
+    background: #eef4fb;
+    box-shadow: 0 8px 24px rgba(15, 39, 71, .08);
+}
+
+.teacher-photo-current img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.teacher-photo-current i {
+    font-size: 34px;
+    color: #8ba0bb;
+}
+
+.teacher-photo-upload > label {
+    min-width: 0;
+}
+
+.teacher-photo-upload input[type="file"] {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    border: 1px dashed #cbd7e6;
+    border-radius: 12px;
+    background: #fff;
+    color: #334155;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.teacher-photo-upload input[type="file"]::file-selector-button {
+    border: 0;
+    border-radius: 9px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    background: #123c78;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.teacher-photo-upload small {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.person-avatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef4fb;
+    border: 1px solid #e0e8f2;
+}
+
+.person-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.person-avatar i {
+    font-size: 17px;
+    color: #6f86a3;
+}
+
+.person-cell {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 190px;
+}
+
+.person-cell > span:last-child {
+    min-width: 0;
+}
+
+.person-cell b,
+.person-cell small {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.person-cell small {
+    margin-top: 3px;
+    color: #7b8ca3;
+}
+
+@media (max-width: 700px) {
+    .teacher-photo-upload {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .teacher-photo-current {
+        width: 92px;
+        height: 92px;
+        min-width: 92px;
+        margin: 0 auto;
+        border-radius: 16px;
+    }
+
+    .teacher-photo-upload input[type="file"] {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .teacher-photo-upload small {
+        text-align: left;
+    }
+
+    .person-avatar {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    .teacher-photo-upload {
+        margin-bottom: 18px;
+        border-radius: 14px;
+    }
+
+    .teacher-photo-current {
+        width: 84px;
+        height: 84px;
+        min-width: 84px;
+    }
+}

@@ -1,0 +1,62 @@
+/* ================= FORMS ================= */
+
+.user-edit-form{padding:25px}
+.user-profile-preview{
+    display:flex;align-items:center;gap:13px;
+    margin-bottom:26px;padding:14px;
+    border:1px solid var(--a-line);
+    border-radius:13px;background:#fafbfc;
+}
+.large-user-avatar{
+    width:58px;height:58px;
+    display:grid;place-items:center;
+    flex:0 0 58px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#fff0cf;
+    font-size:23px;
+}
+.large-user-avatar img{width:100%;height:100%;object-fit:cover}
+.user-profile-preview strong,.user-profile-preview span,.user-profile-preview small{display:block}
+.user-profile-preview strong{font-size:15px}
+.user-profile-preview span{color:var(--a-muted);font-size:11px}
+.user-profile-preview small{margin-top:4px;color:#9aa3b1;font-size:9px}
+.form-section-title{
+    margin:22px 0 13px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--a-line);
+    font-size:12px;font-weight:850;
+}
+.form-grid.two{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+}
+.user-edit-form label{
+    display:flex;flex-direction:column;gap:6px;
+    color:#4b5563;font-size:10px;font-weight:750;
+}
+.user-edit-form label span small{color:#9aa3b1;font-weight:500}
+.user-edit-form input,.user-edit-form select,.user-edit-form textarea{
+    width:100%;
+    min-height:40px;
+    padding:8px 10px;
+    border:1px solid var(--a-line);
+    border-radius:9px;
+    outline:0;background:#fff;color:var(--a-text);
+    font-size:11px;
+}
+.user-edit-form textarea{resize:vertical}
+.full-field{grid-column:1/-1;margin-top:14px}
+.edit-actions{
+    display:flex;justify-content:flex-end;gap:8px;
+    margin-top:25px;padding-top:18px;border-top:1px solid var(--a-line);
+}
+.admin-alert{
+    margin:18px 25px 0;
+    padding:11px 13px;
+    border-radius:9px;
+    font-size:10px;font-weight:650;
+}
+.admin-alert.danger{color:#991b1b;background:#fef2f2;border:1px solid #fecaca}
+.admin-alert.success{color:#166534;background:#f0fdf4;border:1px solid #bbf7d0}

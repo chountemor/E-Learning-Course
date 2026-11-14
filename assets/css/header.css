@@ -1,0 +1,447 @@
+/* =========================================================
+   eLEARNING COLLEGE — PREMIUM HEADER
+   Unified logo • Left-side language/theme • Responsive
+========================================================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    width:100%;
+    background:rgba(255,255,255,.90);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(226,232,240,.85);
+    box-shadow:0 8px 28px rgba(15,23,42,.055);
+}
+
+.header .container{
+    max-width:1380px;
+    margin:auto;
+    padding:0 24px;
+}
+
+.nav{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ---------------- Logo ---------------- */
+.brand,
+.footer-brand-link{
+    display:inline-flex;
+    align-items:center;
+    gap:11px;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+.brand{color:#111827; flex:0 0 auto;}
+
+.brand-icon{
+    width:44px;
+    height:44px;
+    display:grid;
+    place-items:center;
+    flex:0 0 44px;
+    border-radius:14px;
+    color:#111827;
+    background:linear-gradient(135deg,#ffbd35,#f59e0b);
+    box-shadow:0 10px 24px rgba(245,158,11,.23);
+    font-size:20px;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.brand:hover .brand-icon,
+.footer-brand-link:hover .brand-icon{
+    transform:translateY(-2px) rotate(-4deg);
+    box-shadow:0 14px 28px rgba(245,158,11,.30);
+}
+
+.brand-text{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:-.35px;
+}
+
+.brand-text b{color:#f59e0b;}
+
+/* ---------------- LEFT controls ---------------- */
+.header-left-tools{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    margin-left:3px;
+    padding-left:12px;
+    border-left:1px solid var(--line);
+    flex:0 0 auto;
+}
+
+.language-switcher{
+    display:inline-flex;
+    align-items:center;
+    gap:3px;
+    padding:4px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:999px;
+    box-shadow:var(--shadow-sm);
+}
+
+.language-switcher a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    min-width:43px;
+    padding:7px 8px;
+    border-radius:999px;
+    color:var(--muted);
+    text-decoration:none;
+    font-size:11px;
+    font-weight:800;
+    transition:.2s ease;
+}
+
+.language-switcher a:hover{color:var(--dark); background:var(--bg-light);}
+.language-switcher a.active{color:#111827; background:var(--primary); box-shadow:0 4px 12px rgba(245,166,35,.24);}
+.flag{font-size:14px; line-height:1;}
+
+.header-tool{
+    position:relative;
+    width:40px;
+    height:40px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--bg);
+    color:var(--text);
+    cursor:pointer;
+    transition:.22s ease;
+}
+
+.header-tool:hover{
+    color:var(--primary-dark);
+    border-color:rgba(245,166,35,.45);
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-sm);
+}
+
+.theme-toggle .sun{display:none;}
+body.dark .theme-toggle .moon{display:none;}
+body.dark .theme-toggle .sun{display:block;}
+
+/* ---------------- Navigation ---------------- */
+.main-nav{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    margin-left:8px;
+    min-width:0;
+}
+
+.nav-link{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:10px 12px;
+    border-radius:10px;
+    color:#4b5563;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:.2s ease;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:12px;
+    right:12px;
+    bottom:4px;
+    height:2px;
+    border-radius:99px;
+    background:var(--primary);
+    transform:scaleX(0);
+    transition:.2s ease;
+}
+
+.nav-link:hover{color:var(--primary-dark); background:#fff8eb;}
+.nav-link:hover::after{transform:scaleX(1);}
+.nav-link i{font-size:13px;}
+.admin-link{color:var(--primary-dark);}
+
+/* ---------------- Right controls ---------------- */
+.header-tools{display:flex; align-items:center; margin-left:auto;}
+
+.notification-wrap{position:relative;}
+.notification-dot{
+    position:absolute;
+    top:7px;
+    right:7px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#ef4444;
+    border:2px solid var(--bg);
+}
+
+.notification-panel{
+    position:absolute;
+    top:50px;
+    right:0;
+    width:min(350px,calc(100vw - 28px));
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:var(--bg);
+    box-shadow:0 22px 55px rgba(15,23,42,.18);
+    animation:notificationIn .18s ease-out;
+}
+.notification-panel[hidden]{display:none;}
+@keyframes notificationIn{from{opacity:0;transform:translateY(-6px) scale(.98)}to{opacity:1;transform:none}}
+.notification-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 9px 12px;border-bottom:1px solid var(--line)}
+.notification-head>div{display:grid;gap:2px}
+.notification-head strong{font-size:13px;color:var(--dark)}
+.notification-head small{font-size:10px;color:var(--muted)}
+.notification-count{min-width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:var(--primary-light);color:var(--primary-dark);font-size:10px;font-weight:900}
+.notification-item{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;margin-top:3px;color:var(--text);text-decoration:none;transition:.2s ease}
+.notification-item:hover{background:var(--bg-light);transform:translateX(2px)}
+.notification-item>span:last-child{display:grid;gap:2px;min-width:0}
+.notification-item b{font-size:11px;color:var(--dark)}
+.notification-item small{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notification-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:var(--primary-light);color:var(--primary-dark);font-size:12px}
+
+/* ---------------- User ---------------- */
+.nav-user{display:flex;align-items:center;gap:9px;margin-left:9px;flex:0 0 auto;}
+.signin-link{display:inline-flex;align-items:center;gap:7px;color:#374151;text-decoration:none;font-size:13px;font-weight:700;transition:.2s ease;white-space:nowrap;}
+.signin-link:hover{color:var(--primary-dark);}
+
+.btn{min-height:42px;padding:0 15px;border-radius:12px;}
+
+.user-pill{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:5px 10px 5px 5px;
+    border:1px solid var(--line);
+    background:var(--bg-light);
+    border-radius:999px;
+}
+.user-avatar{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--primary);color:#111827;font-size:13px;}
+.user-name{max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#374151;}
+
+.mobile-menu-btn{
+    display:none;
+    width:42px;height:42px;
+    margin-left:auto;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--bg);
+    color:var(--text);
+    cursor:pointer;
+}
+
+/* ---------------- Dark mode ---------------- */
+body.dark .header{background:rgba(11,18,32,.88);border-color:rgba(148,163,184,.15);}
+body.dark .brand{color:#f8fafc;}
+body.dark .header-left-tools{border-color:#263449;}
+body.dark .nav-link{color:#cbd5e1;}
+body.dark .nav-link:hover{background:#172236;color:#fbbf24;}
+body.dark .signin-link{color:#e2e8f0;}
+body.dark .user-name{color:#e2e8f0;}
+body.dark .notification-panel{background:#111a2a;border-color:#263449;box-shadow:0 25px 60px rgba(0,0,0,.35);}
+body.dark .notification-item:hover{background:#172236;}
+body.dark .mobile-menu-btn{background:#111a2a;color:#f8fafc;}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1180px){
+    .header .container{padding:0 18px;}
+    .brand-text{font-size:19px;}
+    .nav-link{padding:9px 9px;font-size:12px;}
+
+    /* Keep Sign In visible on tablets and phones */
+    .nav-user .signin-link{
+        display:inline-flex !important;
+        align-items:center;
+        justify-content:center;
+        gap:6px;
+        white-space:nowrap;
+    }
+}
+
+@media(max-width:980px){
+    .nav{min-height:72px;}
+    .mobile-menu-btn{display:grid;place-items:center;}
+    .main-nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:16px;
+        right:16px;
+        margin:0;
+        padding:10px;
+        flex-direction:column;
+        align-items:stretch;
+        background:var(--bg);
+        border:1px solid var(--line);
+        border-radius:18px;
+        box-shadow:0 20px 50px rgba(15,23,42,.14);
+    }
+    .main-nav.active{display:flex;}
+    .nav-link{width:100%;padding:12px 13px;}
+    .nav-link::after{display:none;}
+    .header-tools{margin-left:0;}
+    .nav-user{margin-left:0;}
+}
+
+@media(max-width:700px){
+    .header .container{padding:0 14px;}
+    .brand-text{font-size:17px;}
+    .brand-icon{width:39px;height:39px;flex-basis:39px;border-radius:12px;font-size:18px;}
+    .header-left-tools{padding-left:7px;gap:4px;}
+    .language-switcher a{min-width:38px;padding:6px 6px;}
+    .language-switcher .flag{display:none;}
+    .header-tool{width:37px;height:37px;border-radius:10px;}
+    .nav-user .btn{padding:0 11px;font-size:12px;}
+    .user-pill{display:none;}
+}
+
+@media(max-width:500px){
+    .brand-text{font-size:15px;}
+    .header-left-tools{border-left:0;padding-left:0;}
+    .nav-user .btn{font-size:0;width:40px;padding:0;}
+    .nav-user .btn i{font-size:14px;margin:0;}
+    .notification-panel{position:fixed;top:68px;right:12px;}
+}
+
+/* =========================================================
+   THEME PRELOAD
+   Keeps the public website in the saved dark mode immediately.
+========================================================= */
+html.theme-dark-preload body{
+    background:#0b1220;
+}
+
+/* Logged-in users use the exact same website controls as guests. */
+.header .header-left-tools,
+.header .header-tools,
+.header .nav-user{
+    flex-shrink:0;
+}
+
+@media(max-width:980px){
+    .header .nav{position:relative;}
+    .header-left-tools{margin-left:auto;}
+    .header-tools{margin-left:0;}
+    .nav-user{margin-left:0;}
+    .mobile-menu-btn{margin-left:0;}
+}
+
+@media(max-width:700px){
+    .header .nav{gap:6px;}
+    .header-left-tools{margin-left:auto;}
+    .header-tools .header-tool{width:37px;height:37px;}
+    .nav-user .btn{min-height:37px;}
+}
+
+/* Unified eLearning College logo */
+.brand-logo-link{display:flex!important;align-items:center!important;line-height:1!important}
+.site-logo{display:block;width:190px;height:auto;max-height:52px;object-fit:contain}
+.footer-logo-link{display:inline-flex!important;align-items:center}
+.footer-site-logo{width:220px;max-height:62px}
+@media(max-width:700px){.site-logo{width:158px;max-height:45px}}
+
+
+/* =========================================================
+   MOBILE SIGN IN — ALWAYS VISIBLE
+   Fix: Sign In was hidden by an older <=1180px rule.
+========================================================= */
+@media (max-width: 980px){
+    .header .nav-user .signin-link{
+        display:inline-flex !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        flex:0 0 auto;
+    }
+}
+
+@media (max-width: 700px){
+    .header .nav-user{
+        display:flex !important;
+        align-items:center;
+        gap:5px;
+        flex:0 0 auto;
+    }
+
+    .header .nav-user .signin-link{
+        display:inline-flex !important;
+        min-height:37px;
+        padding:0 9px;
+        border:1px solid var(--line);
+        border-radius:10px;
+        background:#fff;
+        color:var(--dark);
+        font-size:11px;
+        font-weight:800;
+        line-height:1;
+    }
+
+    .header .nav-user .signin-link i{
+        font-size:13px;
+    }
+
+    /* Keep Get Started compact on smaller screens */
+    .header .nav-user > .btn{
+        min-height:37px;
+        padding:0 9px;
+        font-size:11px;
+        border-radius:10px;
+    }
+}
+
+@media (max-width: 520px){
+    .header .container.nav{
+        gap:4px;
+    }
+
+    .header .site-logo{
+        width:135px !important;
+        max-width:135px;
+        max-height:40px;
+    }
+
+    .header .nav-user{
+        gap:4px;
+    }
+
+    .header .nav-user .signin-link{
+        min-width:37px;
+        width:37px;
+        padding:0 !important;
+        border-radius:10px;
+        font-size:0 !important;
+    }
+
+    .header .nav-user .signin-link i{
+        font-size:14px;
+        margin:0;
+    }
+
+    .header .nav-user > .btn{
+        width:37px;
+        min-width:37px;
+        padding:0 !important;
+        font-size:0 !important;
+    }
+
+    .header .nav-user > .btn i{
+        font-size:14px;
+        margin:0;
+    }
+}

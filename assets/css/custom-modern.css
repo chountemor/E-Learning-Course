@@ -1,0 +1,2540 @@
+/* =========================================================
+   eLEARNING COLLEGE — MODERN / BOOTSTRAP ENHANCEMENTS
+   Fixed Public Header • Hero • Featured Courses
+   More College • Admin • Responsive
+========================================================= */
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.header .container.nav{
+    width:100%;
+    max-width:1380px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-nav{
+    flex:1 1 auto;
+    justify-content:center;
+    min-width:0;
+}
+
+.main-nav .nav-link{
+    flex:0 0 auto;
+}
+
+
+/* =========================================================
+   ADMIN DASHBOARD BUTTON
+========================================================= */
+
+.admin-dashboard-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+
+    min-height:42px;
+    padding:0 13px;
+
+    border:1px solid rgba(245,166,35,.35);
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e8,
+            #fff
+        );
+
+    color:#9a6500;
+
+    font-size:12px;
+    font-weight:800;
+
+    white-space:nowrap;
+    text-decoration:none;
+
+    box-shadow:
+        0 5px 15px
+        rgba(245,166,35,.10);
+
+    transition:all .22s ease;
+}
+
+.admin-dashboard-btn:hover{
+    color:#7a4f00;
+
+    border-color:#f5a623;
+
+    background:#fff6df;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 9px 22px
+        rgba(245,166,35,.16);
+}
+
+
+/* =========================================================
+   USER
+========================================================= */
+
+.nav-user{
+    margin-left:8px;
+}
+
+
+/* =========================================================
+   FIXED PUBLIC HEADER
+   IMPORTANT:
+   Header stays visible while scrolling UP / DOWN.
+========================================================= */
+
+.header{
+    position:fixed !important;
+
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+
+    width:100% !important;
+
+    z-index:99999 !important;
+
+    background:
+        rgba(255,255,255,.96) !important;
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-bottom:
+        1px solid
+        rgba(226,232,240,.85);
+
+    box-shadow:
+        0 8px 28px
+        rgba(15,23,42,.08);
+
+    transition:
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+/* Space for fixed header */
+
+body{
+    padding-top:74px;
+}
+
+
+/* Header navigation height */
+
+.header .nav{
+    min-height:74px;
+}
+
+
+/* =========================================================
+   SCROLLED HEADER
+========================================================= */
+
+.header.is-scrolled{
+    background:
+        rgba(255,255,255,.98) !important;
+
+    box-shadow:
+        0 10px 32px
+        rgba(15,23,42,.12);
+}
+
+
+/* =========================================================
+   HOME NAVIGATION
+========================================================= */
+
+.home-nav-link{
+    font-weight:850 !important;
+}
+
+.home-nav-link::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(245,166,35,.12),
+            rgba(245,166,35,.02)
+        );
+
+    opacity:0;
+
+    transition:.2s ease;
+
+    z-index:-1;
+}
+
+.home-nav-link:hover::before{
+    opacity:1;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo{
+    max-height:48px;
+
+    width:auto;
+
+    display:block;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:
+        clamp(
+            610px,
+            calc(100vh - 74px),
+            760px
+        );
+}
+
+.hero-grid{
+    grid-template-columns:1fr;
+
+    gap:0;
+
+    padding:92px 0 105px;
+}
+
+.hero-content{
+    width:min(920px,100%);
+}
+
+.hero-kicker{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:900;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    padding:9px 16px;
+
+    border:
+        1px solid
+        rgba(245,166,35,.30);
+
+    background:
+        rgba(245,166,35,.08);
+
+    border-radius:999px;
+
+    backdrop-filter:blur(8px);
+}
+
+.hero-kicker i{
+    font-size:14px;
+}
+
+.hero h1{
+    max-width:1000px;
+
+    margin:
+        22px auto 20px;
+
+    font-size:
+        clamp(
+            46px,
+            6.2vw,
+            82px
+        );
+
+    line-height:1.08;
+
+    letter-spacing:-2.8px;
+
+    text-wrap:balance;
+}
+
+.hero p{
+    max-width:700px;
+
+    margin:
+        0 auto 30px;
+
+    color:#e2e7ef;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   HERO SEARCH
+========================================================= */
+
+.hero .search{
+    max-width:720px;
+
+    min-height:68px;
+
+    padding:7px;
+
+    border-radius:18px;
+}
+
+.search-icon{
+    flex:0 0 auto;
+
+    margin-left:16px;
+
+    color:#9ca3af;
+
+    font-size:15px;
+}
+
+.hero .search input{
+    height:54px;
+
+    padding:
+        0 15px;
+}
+
+.hero .search .btn{
+    min-height:54px;
+
+    padding:
+        0 24px;
+
+    border-radius:14px;
+}
+
+
+/* =========================================================
+   HERO BADGES
+========================================================= */
+
+.hero-badges{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px 14px;
+
+    margin-top:25px;
+}
+
+.hero-badges span{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    border-radius:999px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:#e5e7eb;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    backdrop-filter:blur(8px);
+}
+
+.hero-badges i{
+    color:var(--primary);
+}
+
+
+/* =========================================================
+   REMOVE OLD HERO CARD
+========================================================= */
+
+.hero-card{
+    display:none !important;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .header{
+    background:
+        rgba(11,18,32,.97) !important;
+
+    border-bottom-color:
+        rgba(148,163,184,.16);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.30);
+}
+
+body.dark .admin-dashboard-btn{
+    background:#172236;
+
+    border-color:#3a3020;
+
+    color:#f5b83d;
+}
+
+body.dark .admin-dashboard-btn:hover{
+    background:#202d43;
+
+    border-color:#f5a623;
+
+    color:#ffc75a;
+}
+
+
+/* =========================================================
+   FEATURED COURSES
+========================================================= */
+
+.featured-title-row{
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.featured-title-row h2{
+    margin-bottom:0;
+}
+
+.featured-all-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#176fe5;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    font-size:13px;
+}
+
+.featured-all-link:hover{
+    color:#f47c0a;
+}
+
+.featured-empty{
+    padding:42px !important;
+}
+
+.featured-toggle{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.featured-toggle input{
+    accent-color:#176fe5;
+
+    width:20px;
+    height:20px;
+}
+
+.featured-toggle span{
+    font-weight:700;
+}
+
+.featured-toggle .field-help{
+    font-weight:400;
+}
+
+
+/* =========================================================
+   FEATURED COURSE GRID
+========================================================= */
+
+.featured-course-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
+
+    gap:24px;
+}
+
+
+/* =========================================================
+   FEATURED COURSE CARD
+========================================================= */
+
+.featured-course-card{
+    position:relative;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(226,232,240,.9) !important;
+
+    border-radius:
+        24px !important;
+
+    background:#fff !important;
+
+    box-shadow:
+        0 14px 40px
+        rgba(15,23,42,.07) !important;
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease,
+        border-color .28s ease !important;
+}
+
+.featured-course-card:hover{
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 24px 60px
+        rgba(15,23,42,.13) !important;
+
+    border-color:
+        rgba(245,166,35,.42) !important;
+}
+
+
+/* =========================================================
+   FEATURED COURSE IMAGE
+========================================================= */
+
+.featured-course-image{
+    position:relative;
+
+    overflow:hidden;
+
+    height:235px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2f7
+        );
+}
+
+.featured-course-image img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.featured-course-card:hover
+.featured-course-image img{
+    transform:
+        scale(1.06);
+}
+
+
+/* =========================================================
+   FEATURED MEDIA BADGES
+========================================================= */
+
+.featured-media-badges{
+    position:absolute;
+
+    left:15px;
+    bottom:15px;
+
+    display:flex;
+
+    gap:7px;
+
+    z-index:2;
+}
+
+.featured-media-badges span{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:
+        7px 10px;
+
+    border-radius:999px;
+
+    background:
+        rgba(15,23,42,.78);
+
+    color:#fff;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    backdrop-filter:blur(8px);
+}
+
+
+/* =========================================================
+   FEATURED COURSE BODY
+========================================================= */
+
+.featured-course-card .body{
+    padding:
+        22px 22px 20px !important;
+}
+
+.featured-course-card .body > small{
+    color:#c47b00;
+
+    font-weight:900;
+
+    letter-spacing:.9px;
+
+    text-transform:uppercase;
+
+    font-size:10px;
+}
+
+.featured-course-card h3{
+    font-size:22px !important;
+
+    line-height:1.3 !important;
+
+    margin:
+        8px 0 9px !important;
+
+    color:#172033 !important;
+}
+
+.featured-course-card p{
+    min-height:49px;
+
+    color:#718096 !important;
+
+    line-height:1.7 !important;
+}
+
+
+/* =========================================================
+   FEATURED COURSE META
+========================================================= */
+
+.featured-course-meta{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin:
+        17px 0;
+}
+
+
+/* =========================================================
+   FREE BADGE
+========================================================= */
+
+.free-badge{
+    padding:
+        7px 10px !important;
+
+    border-radius:
+        999px !important;
+
+    background:
+        #ecfdf3 !important;
+
+    color:
+        #15803d !important;
+
+    font-weight:
+        900 !important;
+
+    font-size:
+        10px !important;
+}
+
+
+/* =========================================================
+   FEATURED VIEW BUTTON
+========================================================= */
+
+.featured-view-btn{
+    width:100%;
+
+    justify-content:center;
+
+    border-radius:
+        13px !important;
+
+    min-height:45px;
+}
+
+
+/* =========================================================
+   FEATURED TITLE
+========================================================= */
+
+.featured-title-row{
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.featured-all-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#9a6500;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:850;
+
+    padding:
+        10px 13px;
+
+    border:
+        1px solid
+        rgba(245,166,35,.3);
+
+    border-radius:12px;
+
+    background:#fffaf0;
+}
+
+.featured-all-link:hover{
+    background:#fff4dc;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* =========================================================
+   MORE FROM COLLEGE
+========================================================= */
+
+.more-college-section{
+    background:
+        linear-gradient(
+            180deg,
+            #fff,
+            #f8fafc
+        );
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.more-college-section::before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    right:-190px;
+    top:-180px;
+
+    border-radius:50%;
+
+    background:
+        rgba(245,166,35,.08);
+
+    filter:blur(2px);
+}
+
+
+/* =========================================================
+   MORE SECTION HEADING
+========================================================= */
+
+.more-section-heading{
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    margin-bottom:28px;
+}
+
+.more-eyebrow{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#b56d00;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+}
+
+.more-section-heading h2{
+    margin:
+        9px 0 8px;
+
+    font-size:
+        clamp(
+            28px,
+            3.4vw,
+            42px
+        );
+
+    line-height:1.15;
+
+    letter-spacing:-1.2px;
+
+    color:#172033;
+}
+
+.more-section-heading p{
+    max-width:700px;
+
+    margin:0;
+
+    color:#718096;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   MORE HEADING LINK
+========================================================= */
+
+.more-heading-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    white-space:nowrap;
+
+    text-decoration:none;
+
+    color:#172033;
+
+    font-weight:850;
+
+    font-size:12px;
+
+    padding:
+        12px 15px;
+
+    border:
+        1px solid
+        #e2e8f0;
+
+    border-radius:13px;
+
+    background:#fff;
+
+    box-shadow:
+        0 8px 22px
+        rgba(15,23,42,.05);
+}
+
+.more-heading-link:hover{
+    border-color:#f5a623;
+
+    color:#a56600;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   MORE COLLEGE GRID
+========================================================= */
+
+.more-college-grid{
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0,1fr)
+        );
+
+    gap:18px;
+}
+
+
+/* =========================================================
+   MORE COLLEGE CARD
+========================================================= */
+
+.more-college-card{
+    overflow:hidden;
+
+    background:#fff;
+
+    border:
+        1px solid
+        #e6ebf2;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 10px 32px
+        rgba(15,23,42,.055);
+
+    transition:.28s ease;
+}
+
+.more-college-card:hover{
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(245,166,35,.38);
+
+    box-shadow:
+        0 22px 48px
+        rgba(15,23,42,.11);
+}
+
+
+/* =========================================================
+   MORE CARD MEDIA
+========================================================= */
+
+.more-card-media{
+    height:165px;
+
+    position:relative;
+
+    display:grid;
+
+    place-items:center;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172033,
+            #273a55
+        );
+}
+
+.more-card-media img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease;
+}
+
+.more-college-card:hover
+.more-card-media img{
+    transform:
+        scale(1.06);
+}
+
+
+/* =========================================================
+   MORE CARD ICON
+========================================================= */
+
+.more-card-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:21px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffc55c,
+            #f5a623
+        );
+
+    color:#172033;
+
+    font-size:27px;
+
+    box-shadow:
+        0 14px 28px
+        rgba(245,166,35,.23);
+}
+
+
+/* =========================================================
+   MORE CARD NUMBER
+========================================================= */
+
+.more-card-number{
+    position:absolute;
+
+    top:12px;
+    right:12px;
+
+    min-width:34px;
+    height:28px;
+
+    padding:
+        0 8px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:999px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    color:#172033;
+
+    font-size:10px;
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   MORE CARD BODY
+========================================================= */
+
+.more-card-body{
+    padding:
+        19px 19px 18px;
+}
+
+.more-card-body > span{
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+
+    color:#b56d00;
+}
+
+.more-card-body h3{
+    margin:
+        7px 0 7px;
+
+    color:#172033;
+
+    font-size:19px;
+
+    line-height:1.3;
+}
+
+.more-card-body p{
+    min-height:60px;
+
+    margin:
+        0 0 15px;
+
+    color:#718096;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   MORE DETAIL LINK
+========================================================= */
+
+.more-detail-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    color:#172033;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+.more-detail-link:hover{
+    color:#b56d00;
+
+    gap:11px;
+}
+
+
+/* =========================================================
+   MORE DETAIL PAGE
+========================================================= */
+
+.more-detail-page{
+    background:#f7f9fc;
+
+    min-height:
+        calc(100vh - 74px);
+}
+
+
+/* =========================================================
+   MORE DETAIL HERO
+========================================================= */
+
+.more-detail-hero{
+    padding:
+        36px 0 34px;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(245,166,35,.14),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #fff,
+            #f4f7fb
+        );
+
+    border-bottom:
+        1px solid
+        #e7ebf1;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.more-breadcrumb{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#718096;
+
+    text-decoration:none;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+.more-breadcrumb:hover{
+    color:#a56600;
+}
+
+
+/* =========================================================
+   MORE DETAIL CARD
+========================================================= */
+
+.more-detail-card{
+    display:grid;
+
+    grid-template-columns:
+        minmax(300px,430px)
+        minmax(0,1fr);
+
+    gap:38px;
+
+    align-items:center;
+
+    padding:24px;
+
+    border:
+        1px solid
+        #e5eaf0;
+
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 24px 70px
+        rgba(15,23,42,.08);
+}
+
+
+/* =========================================================
+   DETAIL VISUAL
+========================================================= */
+
+.more-detail-visual{
+    height:330px;
+
+    border-radius:21px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172033,
+            #2d405b
+        );
+
+    display:grid;
+
+    place-items:center;
+}
+
+.more-detail-visual img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   DETAIL ICON
+========================================================= */
+
+.more-detail-icon{
+    width:105px;
+    height:105px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:31px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffc55c,
+            #f5a623
+        );
+
+    font-size:42px;
+
+    color:#172033;
+
+    box-shadow:
+        0 25px 50px
+        rgba(245,166,35,.22);
+}
+
+
+/* =========================================================
+   DETAIL COPY
+========================================================= */
+
+.more-detail-copy h1{
+    margin:
+        10px 0 14px;
+
+    font-size:
+        clamp(
+            34px,
+            5vw,
+            58px
+        );
+
+    line-height:1.08;
+
+    letter-spacing:-1.8px;
+
+    color:#172033;
+}
+
+.more-detail-lead{
+    margin:0;
+
+    max-width:760px;
+
+    color:#667085;
+
+    font-size:16px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   DETAIL META
+========================================================= */
+
+.more-detail-meta{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-top:22px;
+}
+
+.more-detail-meta span{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        9px 12px;
+
+    border:
+        1px solid
+        #e4e9ef;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#667085;
+
+    font-size:11px;
+
+    font-weight:800;
+}
+
+.more-detail-meta i{
+    color:#d98b00;
+}
+
+
+/* =========================================================
+   DETAIL CONTENT WRAP
+========================================================= */
+
+.more-detail-content-wrap{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        320px;
+
+    gap:25px;
+
+    padding-top:35px;
+
+    padding-bottom:60px;
+}
+
+
+/* =========================================================
+   DETAIL CONTENT / SIDE CARD
+========================================================= */
+
+.more-detail-content,
+.more-side-card{
+    background:#fff;
+
+    border:
+        1px solid
+        #e5eaf0;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(15,23,42,.05);
+}
+
+.more-detail-content{
+    padding:30px;
+}
+
+
+/* =========================================================
+   CONTENT HEADING
+========================================================= */
+
+.more-content-heading > span{
+    font-size:9px;
+
+    letter-spacing:1.5px;
+
+    font-weight:900;
+
+    color:#b56d00;
+}
+
+.more-content-heading h2{
+    margin:
+        7px 0 22px;
+
+    font-size:27px;
+
+    color:#172033;
+}
+
+.more-rich-content{
+    color:#4b5563;
+
+    font-size:15px;
+
+    line-height:2;
+
+    white-space:normal;
+}
+
+
+/* =========================================================
+   DETAIL SIDEBAR
+========================================================= */
+
+.more-detail-sidebar{
+    display:grid;
+
+    align-content:start;
+
+    gap:15px;
+}
+
+.more-side-card{
+    padding:23px;
+}
+
+.more-side-card.soft{
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #fff
+        );
+}
+
+.more-side-icon{
+    width:45px;
+    height:45px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:14px;
+
+    background:#fff4dc;
+
+    color:#b56d00;
+
+    margin-bottom:13px;
+}
+
+.more-side-card h3{
+    margin:
+        0 0 7px;
+
+    color:#172033;
+
+    font-size:18px;
+}
+
+.more-side-card p{
+    margin:
+        0 0 17px;
+
+    color:#718096;
+
+    font-size:12px;
+
+    line-height:1.75;
+}
+
+.more-side-card .btn{
+    width:100%;
+
+    justify-content:center;
+}
+
+.more-side-link{
+    display:inline-flex;
+
+    gap:7px;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    color:#172033;
+}
+
+.more-side-link:hover{
+    color:#b56d00;
+}
+
+
+/* =========================================================
+   NOT FOUND
+========================================================= */
+
+.more-not-found{
+    text-align:center;
+
+    padding:
+        100px 20px;
+}
+
+.more-not-found-icon{
+    width:70px;
+    height:70px;
+
+    margin:
+        0 auto 15px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:20px;
+
+    background:#fff4dc;
+
+    color:#b56d00;
+
+    font-size:28px;
+}
+
+
+/* =========================================================
+   ADMIN PEOPLE
+========================================================= */
+
+.people-manager-card .teacher-photo-upload{
+    display:grid;
+
+    grid-template-columns:
+        80px 1fr;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:14px;
+
+    margin-bottom:16px;
+
+    border:
+        1px solid
+        #e5eaf0;
+
+    border-radius:16px;
+
+    background:#fafbfc;
+}
+
+.teacher-photo-current{
+    width:80px;
+    height:80px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#fff4dc;
+
+    color:#c47b00;
+
+    font-size:25px;
+}
+
+.teacher-photo-current img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   PERSON CELL
+========================================================= */
+
+.person-cell{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.person-avatar{
+    width:42px;
+    height:42px;
+
+    flex:
+        0 0 42px;
+
+    border-radius:13px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#fff4dc;
+
+    color:#b56d00;
+}
+
+.person-avatar img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.person-cell > b,
+.person-cell span > small{
+    display:block;
+}
+
+
+/* =========================================================
+   MORE ADMIN GRID
+========================================================= */
+
+.more-admin-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap:15px;
+}
+
+.more-admin-item{
+    display:grid;
+
+    grid-template-columns:
+        68px 1fr auto;
+
+    gap:14px;
+
+    align-items:center;
+
+    padding:15px;
+
+    border:
+        1px solid
+        #e5eaf0;
+
+    border-radius:17px;
+
+    background:#fff;
+}
+
+.more-admin-thumb{
+    width:68px;
+    height:68px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#172033;
+
+    color:#f5a623;
+
+    font-size:21px;
+}
+
+.more-admin-thumb img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.more-admin-copy small{
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    font-weight:900;
+
+    color:#b56d00;
+}
+
+.more-admin-copy h3{
+    margin:
+        4px 0;
+
+    font-size:16px;
+
+    color:#172033;
+}
+
+.more-admin-copy p{
+    margin:0;
+
+    color:#718096;
+
+    font-size:11px;
+
+    line-height:1.55;
+}
+
+.more-admin-actions{
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:5px;
+}
+
+.more-admin-actions form{
+    margin:0;
+}
+
+
+/* =========================================================
+   TEACHER ACCOUNT ACTIONS
+========================================================= */
+
+.teacher-account-actions{
+    display:grid;
+
+    gap:8px;
+}
+
+.teacher-website-btn,
+.teacher-logout-card{
+    display:flex !important;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-height:52px;
+
+    padding:
+        0 11px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    transition:.2s ease;
+}
+
+.teacher-website-btn{
+    border:
+        1px solid
+        rgba(245,166,35,.18);
+
+    background:
+        rgba(245,166,35,.07);
+
+    color:#d9e2ef;
+}
+
+.teacher-website-btn:hover{
+    background:
+        rgba(245,166,35,.14);
+
+    color:#fff;
+
+    transform:
+        translateY(-2px);
+}
+
+.teacher-website-btn > span:not(.nav-icon),
+.teacher-logout-card > span:not(.nav-icon){
+    display:grid;
+
+    gap:2px;
+
+    flex:1;
+}
+
+.teacher-website-btn strong,
+.teacher-logout-card strong{
+    font-size:11px;
+}
+
+.teacher-website-btn small,
+.teacher-logout-card small{
+    font-size:8px;
+
+    color:#71809a;
+}
+
+.teacher-website-btn > i{
+    font-size:10px;
+
+    color:#f5a623;
+}
+
+.teacher-logout-card{
+    margin-top:8px;
+
+    color:#f2a1a1 !important;
+
+    border:
+        1px solid
+        rgba(239,68,68,.1);
+
+    background:
+        rgba(239,68,68,.04);
+}
+
+.teacher-logout-card:hover{
+    background:
+        rgba(239,68,68,.10) !important;
+
+    transform:
+        translateY(-2px);
+}
+
+.teacher-avatar{
+    overflow:hidden !important;
+}
+
+.teacher-avatar img{
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+/* =========================================================
+   LOGO PATCH
+========================================================= */
+
+.brand-logo-link{
+    display:inline-flex;
+
+    align-items:center;
+
+    flex:0 0 auto;
+
+    text-decoration:none;
+}
+
+.site-logo{
+    display:block;
+
+    width:188px;
+
+    height:auto;
+
+    max-height:58px;
+
+    object-fit:contain;
+
+    transition:
+        transform .2s ease,
+        filter .2s ease;
+}
+
+.brand-logo-link:hover .site-logo{
+    transform:
+        translateY(-1px);
+
+    filter:
+        drop-shadow(
+            0 6px 12px
+            rgba(23,111,229,.14)
+        );
+}
+
+
+/* =========================================================
+   TABLET HEADER
+========================================================= */
+
+@media(max-width:1250px){
+
+    .header .container.nav{
+        gap:8px;
+    }
+
+    .brand-text{
+        font-size:19px;
+    }
+
+    .main-nav{
+        gap:1px;
+
+        margin-left:3px;
+    }
+
+    .nav-link{
+        padding:
+            9px 8px;
+
+        font-size:12px;
+    }
+
+    .admin-dashboard-btn{
+        padding:
+            0 10px;
+    }
+
+    .user-name{
+        max-width:92px;
+    }
+}
+
+
+/* =========================================================
+   1080px
+========================================================= */
+
+@media(max-width:1080px){
+
+    .main-nav .nav-link{
+        padding:
+            8px 6px;
+
+        font-size:11px;
+
+        gap:5px;
+    }
+
+    .admin-dashboard-btn span{
+        display:none;
+    }
+
+    .admin-dashboard-btn{
+        width:42px;
+
+        padding:0;
+    }
+}
+
+
+/* =========================================================
+   980px
+========================================================= */
+
+@media(max-width:980px){
+
+    body{
+        padding-top:72px !important;
+    }
+
+    .header{
+        position:fixed !important;
+
+        top:0 !important;
+
+        left:0 !important;
+
+        right:0 !important;
+
+        width:100% !important;
+
+        z-index:99999 !important;
+    }
+
+    .header .nav{
+        min-height:72px !important;
+    }
+
+    .main-nav{
+        flex:0 0 auto;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero-grid{
+        padding:
+            78px 0 88px;
+    }
+}
+
+
+/* =========================================================
+   900px LOGO
+========================================================= */
+
+@media(max-width:900px){
+
+    .site-logo{
+        width:155px;
+
+        max-height:48px;
+    }
+}
+
+
+/* =========================================================
+   760px
+========================================================= */
+
+@media(max-width:760px){
+
+    .featured-course-grid,
+    .more-college-grid,
+    .more-admin-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-title-row,
+    .more-section-heading{
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+    .more-detail-card{
+        grid-template-columns:1fr;
+
+        padding:16px;
+    }
+
+    .more-detail-visual{
+        height:250px;
+    }
+
+    .more-detail-content{
+        padding:21px;
+    }
+
+    .more-detail-copy h1{
+        font-size:36px;
+    }
+
+    .teacher-photo-upload{
+        grid-template-columns:
+            1fr !important;
+    }
+}
+
+
+/* =========================================================
+   700px MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    body{
+        padding-top:62px !important;
+    }
+
+    .header{
+        position:fixed !important;
+
+        top:0 !important;
+
+        left:0 !important;
+
+        right:0 !important;
+
+        width:100% !important;
+
+        z-index:99999 !important;
+    }
+
+    .header .container.nav{
+        min-height:62px;
+
+        padding-left:12px;
+
+        padding-right:12px;
+
+        gap:6px;
+    }
+
+    .header .nav{
+        min-height:62px !important;
+    }
+
+    .site-logo{
+        width:142px;
+
+        max-height:44px;
+    }
+
+    .header-tools{
+        margin-left:auto;
+    }
+
+    .nav-user .signin-link{
+        padding:
+            7px 8px;
+
+        font-size:10px;
+    }
+
+    .nav-user .btn{
+        display:none;
+    }
+
+    .notification-btn{
+        width:34px;
+        height:34px;
+    }
+
+    .mobile-menu-btn{
+        width:38px;
+        height:38px;
+
+        border-radius:10px;
+    }
+
+
+    /* Hero */
+
+    .hero{
+        min-height:590px;
+    }
+
+    .hero-grid{
+        padding:
+            70px 0 76px;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(
+                38px,
+                10vw,
+                58px
+            );
+
+        letter-spacing:-1.8px;
+    }
+
+    .hero p{
+        font-size:14px;
+
+        line-height:1.8;
+    }
+
+    .hero .search{
+        min-height:58px;
+
+        padding:5px;
+    }
+
+    .hero .search input{
+        height:47px;
+
+        font-size:13px;
+    }
+
+    .hero .search .btn{
+        min-height:47px;
+
+        padding:
+            0 13px;
+
+        font-size:12px;
+    }
+
+    .hero .search .btn i{
+        display:none;
+    }
+
+    .hero-badges{
+        gap:7px;
+    }
+
+    .hero-badges span{
+        font-size:10px;
+
+        padding:
+            7px 9px;
+    }
+}
+
+
+/* =========================================================
+   520px
+========================================================= */
+
+@media(max-width:520px){
+
+    .featured-course-image{
+        height:210px !important;
+    }
+
+    .more-card-media{
+        height:145px;
+    }
+
+    .more-detail-hero{
+        padding-top:25px;
+    }
+}
+
+
+/* =========================================================
+   500px
+========================================================= */
+
+@media(max-width:500px){
+
+    body{
+        padding-top:62px !important;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero-kicker{
+        font-size:10px;
+
+        letter-spacing:1px;
+    }
+
+    .hero .search{
+        display:grid;
+
+        grid-template-columns:
+            auto 1fr;
+    }
+
+    .hero .search .btn{
+        grid-column:
+            1 / -1;
+
+        width:100%;
+    }
+
+    .search-icon{
+        margin-left:13px;
+    }
+
+    .main-nav{
+        top:62px !important;
+    }
+}
+
+
+/* =========================================================
+   380px
+========================================================= */
+
+@media(max-width:380px){
+
+    body{
+        padding-top:58px !important;
+    }
+
+    .site-logo{
+        width:126px;
+    }
+
+    .header .container.nav{
+        min-height:58px;
+    }
+
+    .header .nav{
+        min-height:58px !important;
+    }
+
+    .nav-user .signin-link span{
+        display:none;
+    }
+
+    .main-nav{
+        top:58px !important;
+    }
+}
+
+
+/* =========================================================
+   FEATURED TITLE MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .featured-title-row{
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+    .featured-all-link{
+        margin-top:-4px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    .admin-dashboard-btn,
+    .hero *,
+    .featured-course-card,
+    .more-college-card,
+    .more-heading-link,
+    .more-detail-link,
+    .teacher-website-btn,
+    .teacher-logout-card{
+        transition:none !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL FIXED HEADER OVERRIDE
+   KEEP THIS AT THE VERY END
+========================================================= */
+
+.header{
+    position:fixed !important;
+
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+
+    width:100% !important;
+
+    z-index:99999 !important;
+}
+
+
+/* Desktop */
+
+@media(min-width:981px){
+
+    body{
+        padding-top:74px !important;
+    }
+
+    .header{
+        position:fixed !important;
+        top:0 !important;
+    }
+}
+
+
+/* Tablet */
+
+@media(max-width:980px){
+
+    body{
+        padding-top:72px !important;
+    }
+
+    .header{
+        position:fixed !important;
+
+        top:0 !important;
+        left:0 !important;
+        right:0 !important;
+
+        width:100% !important;
+    }
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    body{
+        padding-top:62px !important;
+    }
+
+    .header{
+        position:fixed !important;
+
+        top:0 !important;
+        left:0 !important;
+        right:0 !important;
+
+        width:100% !important;
+    }
+}
+
+
+/* Tiny phones */
+
+@media(max-width:380px){
+
+    body{
+        padding-top:58px !important;
+    }
+
+    .header{
+        position:fixed !important;
+
+        top:0 !important;
+    }
+}
+
+
+/* =========================================================
+   DARK MODE — FINAL HEADER
+========================================================= */
+
+body.dark .header{
+    background:
+        rgba(11,18,32,.97) !important;
+
+    border-bottom-color:
+        rgba(148,163,184,.16);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.30);
+}
+
+
+/* =========================================================
+   HEADER PRESS EFFECT
+========================================================= */
+
+.is-pressed{
+    transform:
+        scale(.985) !important;
+}
+
+
+/* =========================================================
+   FINAL SAFETY RULE
+   Prevent accidental sticky positioning.
+========================================================= */
+
+.header,
+header.header{
+    position:fixed !important;
+
+    top:0 !important;
+
+    left:0 !important;
+
+    right:0 !important;
+
+    width:100% !important;
+
+    z-index:99999 !important;
+}

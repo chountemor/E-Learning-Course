@@ -1,0 +1,14 @@
+/* ================= DIPLOMAS SECTION ================= */
+
+.credentials-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.credential-card{
+    padding:23px;
+    border:1px solid var(--a-line);
+    border-radius:17px;
+    background:#fff;
+    box-shadow:var(--a-shadow);
+}

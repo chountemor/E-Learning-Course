@@ -1,0 +1,41 @@
+/* =========================================================
+   eLearning College — AUTH MODAL
+   Login / Register popup used by the public website
+========================================================= */
+.auth-modal[hidden]{display:none!important}
+.auth-modal{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:18px;background:rgba(8,15,28,.68);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.auth-modal-dialog{position:relative;width:min(820px,100%);height:min(720px,calc(100vh - 36px));background:#fff;border:1px solid rgba(255,255,255,.7);border-radius:24px;box-shadow:0 30px 90px rgba(0,0,0,.35);overflow:hidden;animation:authModalIn .22s ease-out}
+.auth-modal-top{position:absolute;top:12px;right:12px;z-index:5;display:flex;gap:8px}
+.auth-modal-close{width:38px;height:38px;border:0;border-radius:12px;background:rgba(255,255,255,.94);color:#64748b;display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 20px rgba(15,23,42,.12);font-size:16px}
+.auth-modal-close:hover{background:#fff1df;color:#c47b00}
+.auth-modal-frame{width:100%;height:100%;border:0;display:block;background:#fff}
+.auth-modal-switch{position:absolute;left:18px;bottom:14px;z-index:5;display:flex;gap:7px;padding:5px;border-radius:14px;background:rgba(255,255,255,.95);box-shadow:0 6px 20px rgba(15,23,42,.12)}
+.auth-modal-switch button{border:0;background:transparent;padding:8px 12px;border-radius:10px;color:#64748b;font:700 12px Inter,Arial,sans-serif;cursor:pointer}
+.auth-modal-switch button.active{background:#fff4dd;color:#c47b00}
+body.auth-modal-open{overflow:hidden}
+@keyframes authModalIn{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+@media(max-width:640px){.auth-modal{padding:8px}.auth-modal-dialog{height:calc(100vh - 16px);border-radius:18px}.auth-modal-switch{left:12px;bottom:10px}.auth-modal-close{width:36px;height:36px}}
+\n\n/* Compact website-style popup */\n.auth-modal-dialog{width:min(760px,100%);height:min(610px,calc(100vh - 28px));border-radius:22px}\n.auth-modal-top{top:10px;right:10px}\n.auth-modal-close{width:34px;height:34px;border-radius:50%}\n.auth-modal-frame{height:100%}\n.auth-modal-switch{left:50%;transform:translateX(-50%);bottom:10px}\n@media(max-width:640px){.auth-modal-dialog{height:calc(100vh - 12px);border-radius:16px}.auth-modal-switch{width:calc(100% - 24px);justify-content:center}.auth-modal-switch button{flex:1}}\n
+
+/* Compact auth popup on phones */
+@media(max-width:560px){
+    .auth-modal{
+        padding:5px;
+        align-items:center;
+    }
+    .auth-modal-dialog{
+        width:100%;
+        height:min(570px,calc(100svh - 10px));
+        max-height:calc(100svh - 10px);
+        border-radius:15px;
+    }
+    .auth-modal-close{
+        width:32px;
+        height:32px;
+    }
+}
+@media(max-width:380px){
+    .auth-modal-dialog{
+        height:min(540px,calc(100svh - 8px));
+    }
+}

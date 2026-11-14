@@ -1,0 +1,248 @@
+/* eLearning College — Admin CSS entry point
+   Edit the smaller files in assets/css/admin/ for each section. */
+
+@import url("admin/common.css");
+@import url("admin/components.css");
+@import url("admin/courses.css");
+@import url("admin/dashboard.css");
+@import url("admin/users.css");
+@import url("admin/forms.css");
+@import url("admin/diplomas.css");
+@import url("admin/people.css");
+@import url("admin/responsive.css");
+/* =========================================================
+   ADMIN TOP BAR
+========================================================= */
+
+.adminbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.adminbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   VIEW WEBSITE
+========================================================= */
+
+.view-website-btn {
+    height: 52px;
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: #ffffff;
+    color: #1e293b;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    font-family:
+        "Inter",
+        "Kantumruy Pro",
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.04);
+
+    transition:
+        all 0.2s ease;
+}
+
+.view-website-btn i {
+    font-size: 15px;
+}
+
+.view-website-btn:hover {
+    color: #d98b00;
+
+    border-color: #f5a623;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   USER PILL
+========================================================= */
+
+.user-pill {
+    min-height: 52px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    color: #1e293b;
+
+    font-family:
+        "Inter",
+        "Kantumruy Pro",
+        sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   USER AVATAR
+========================================================= */
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f0efff;
+
+    color: #1e1b4b;
+
+    border-radius: 50%;
+}
+
+.user-avatar i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   USER ARROW
+========================================================= */
+
+.user-arrow {
+    margin-left: 5px;
+
+    font-size: 11px;
+
+    color: #475569;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-link {
+    margin-top: 18px;
+}
+
+.logout-link:hover {
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .adminbar {
+        gap: 10px;
+    }
+
+    .adminbar-right {
+        gap: 8px;
+    }
+
+    .view-website-btn {
+        width: 48px;
+        height: 48px;
+
+        padding: 0;
+
+        border-radius: 14px;
+    }
+
+    .view-website-btn span {
+        display: none;
+    }
+
+    .view-website-btn i {
+        font-size: 16px;
+    }
+
+    .user-pill {
+        min-height: 48px;
+
+        padding: 0 12px;
+
+        border-radius: 14px;
+    }
+
+    .user-name {
+        display: none;
+    }
+
+    .user-arrow {
+        display: none;
+    }
+
+}
+/* =========================================================
+   CATEGORY / SKILL MANAGEMENT
+========================================================= */
+.category-form-grid{display:grid;grid-template-columns:2fr 2fr .8fr 1.2fr;gap:16px;margin-bottom:16px}
+.category-form-grid label,.category-manager-card form>label{display:flex;flex-direction:column;gap:8px;font-weight:700;color:#263244}
+.category-manager-card input,.category-manager-card select,.category-manager-card textarea{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;color:#263244;outline:none;font:inherit;transition:.2s}
+.category-manager-card input:focus,.category-manager-card select:focus,.category-manager-card textarea:focus{border-color:#f5a623;box-shadow:0 0 0 4px rgba(245,166,35,.12)}
+.category-list-card{margin-top:20px}
+.category-count{padding:8px 12px;border-radius:999px;background:#fff6e6;color:#b66b00;font-weight:800}
+.category-admin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.category-admin-item{display:grid;grid-template-columns:58px 1fr auto;gap:15px;align-items:start;padding:18px;border:1px solid #e5e7eb;border-radius:16px;background:#fff;box-shadow:0 5px 18px rgba(16,24,39,.05);transition:.2s}
+.category-admin-item:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,24,39,.08);border-color:rgba(245,166,35,.4)}
+.category-admin-item.is-inactive{opacity:.62}
+.category-admin-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:15px;background:#fff6e6;font-size:28px}
+.category-admin-info h3{margin:0 0 3px;font-size:17px;color:#101827}
+.category-kh{font-family:'Kantumruy Pro',sans-serif;font-weight:700;color:#b66b00;margin-bottom:5px}
+.category-admin-info p{margin:0 0 10px;color:#6b7280;font-size:13px;line-height:1.6}
+.category-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:#6b7280;font-weight:700}
+.status-pill{padding:4px 9px;border-radius:999px}.status-pill.active{background:#eaf8ef;color:#187a3d}.status-pill.inactive{background:#f1f2f4;color:#6b7280}
+.category-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}.category-actions form{margin:0}.category-actions button{background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.alert.success{padding:12px 14px;border-radius:12px;background:#eaf8ef;color:#187a3d;margin-bottom:16px;font-weight:700}
+@media(max-width:1000px){.category-form-grid{grid-template-columns:1fr 1fr}.category-admin-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.category-form-grid{grid-template-columns:1fr}.category-admin-item{grid-template-columns:50px 1fr}.category-actions{grid-column:2;flex-direction:row;align-items:center}}
+
+/* Premium admin top actions */
+.adminbar{position:sticky;top:0;z-index:900;padding:10px 0;background:rgba(246,248,251,.88);backdrop-filter:blur(16px);}
+.view-website-btn{background:linear-gradient(135deg,#fff,#fffaf0);border-color:rgba(245,166,35,.28);box-shadow:0 8px 22px rgba(15,23,42,.055);}
+.view-website-btn i{color:#d98b00;}
+.account-logout{border-radius:12px !important;font-weight:800 !important;}
+.account-logout:hover{background:#fff1f2 !important;color:#dc2626 !important;}

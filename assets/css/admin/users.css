@@ -1,0 +1,72 @@
+/* ================= USERS ================= */
+
+.users-filter{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    padding:17px 25px;
+    border-bottom:1px solid var(--a-line);
+}
+.user-search{position:relative;flex:1;min-width:220px}
+.user-search i{
+    position:absolute;left:12px;top:50%;
+    transform:translateY(-50%);
+    color:#9aa3b1;font-size:11px;
+}
+.user-search input{
+    width:100%;
+    min-height:40px;
+    padding:8px 11px 8px 32px;
+    border:1px solid var(--a-line);
+    border-radius:9px;
+    outline:0;
+    font-size:11px;
+}
+.users-filter select,.inline-form select{
+    min-height:40px;
+    padding:7px 25px 7px 10px;
+    border:1px solid var(--a-line);
+    border-radius:9px;
+    outline:0;
+    background:#fff;
+    color:var(--a-text);
+    font-size:10px;
+}
+.user-search input:focus,.users-filter select:focus,.inline-form select:focus{
+    border-color:rgba(245,166,35,.75);
+    box-shadow:0 0 0 3px rgba(245,166,35,.10);
+}
+.users-head{align-items:flex-start!important}
+.user-count{display:flex;align-items:center;gap:6px;color:var(--a-muted);font-size:10px}
+.user-count strong{color:var(--a-text);font-size:16px}
+.table-user{display:flex;align-items:center;gap:9px}
+.table-avatar{
+    width:36px;height:36px;
+    display:grid;place-items:center;
+    border-radius:50%;
+    background:#fff0cf;
+    color:#8a5a00;
+    font-size:11px;font-weight:850;
+}
+.table-user b{display:block;font-size:10px}
+.table-user small,.contact-cell small{
+    display:block;margin-top:2px;color:var(--a-muted);font-size:8px;
+}
+.contact-cell span{
+    display:block;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    font-size:10px;
+}
+.user-actions{display:flex;align-items:center;justify-content:center;gap:4px}
+.icon-action{
+    width:29px;height:29px;
+    display:grid;place-items:center;
+    border:1px solid var(--a-line);
+    border-radius:7px;
+    background:#fff;
+    color:#6b7280;
+    cursor:pointer;
+}
+.icon-action:hover{transform:translateY(-1px);background:#f8fafc}
+.icon-action.view:hover{color:#2563eb}
+.icon-action.edit:hover{color:#d98b00}
+.icon-action.delete:hover{color:#dc2626}

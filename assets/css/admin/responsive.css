@@ -1,0 +1,47 @@
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+    .admin-sidebar{width:220px}
+    .admin-main{margin-left:220px}
+    .admin-course-stats,.stats-grid{grid-template-columns:repeat(2,1fr)}
+    .quick-grid{grid-template-columns:repeat(2,1fr)}
+    .management-grid{grid-template-columns:repeat(3,1fr)}
+    .course-toolbar{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:760px){
+    .admin-sidebar{
+        position:relative;
+        width:100%;
+        max-height:none;
+    }
+    .admin{display:block}
+    .admin-main{margin-left:0}
+    .adminbar{
+        position:relative;
+        align-items:flex-start;
+        flex-direction:column;
+        padding:15px 18px;
+    }
+    .adminbar-right{width:100%;flex-wrap:wrap}
+    .admin-main > .admincard,.admin-main > div:not(.adminbar){
+        margin:17px 14px;
+    }
+    .course-manager-hero{align-items:flex-start;flex-direction:column;padding:22px}
+    .admin-course-stats{margin:15px 14px 20px!important}
+    .course-toolbar,.users-filter{display:flex;align-items:stretch;flex-direction:column;padding:15px}
+    .course-toolbar>*{width:100%}
+    .user-search{min-width:0}
+    .quick-grid,.management-grid{grid-template-columns:1fr}
+    .form-grid.two,.admincard form.two,.admincard .two{grid-template-columns:1fr}
+    .full-field{grid-column:auto}
+    .course-table{padding:0 15px 15px;overflow-x:auto}
+    .course-table-head,.course-table-row{min-width:700px}
+}
+
+@media(max-width:480px){
+    .admin-course-stats,.stats-grid{grid-template-columns:1fr}
+    .admincard .head,.section-head{padding:18px}
+    .user-edit-form,.admincard.form{padding:18px}
+    .adminbar-right>*{flex:1}
+}

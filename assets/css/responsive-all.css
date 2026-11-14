@@ -1,0 +1,358 @@
+
+/* =========================================================
+   eLearning College — RESPONSIVE FINAL OVERRIDES
+   Computer • Tablet • Phone
+========================================================= */
+
+html { overflow-x:hidden; }
+body { overflow-x:hidden; }
+
+img, video, iframe { max-width:100%; }
+img { height:auto; }
+button, input, select, textarea { max-width:100%; }
+
+/* Public website containers */
+.header .container,
+.container,
+.section .container {
+    width: min(1380px, calc(100% - 32px));
+}
+
+/* Public header: keep every control reachable */
+@media (max-width: 980px) {
+    .header .container.nav {
+        width:100%;
+        max-width:none;
+    }
+
+    .main-nav {
+        z-index:1100;
+    }
+}
+
+@media (max-width: 700px) {
+    .header .container.nav {
+        padding-left:10px;
+        padding-right:10px;
+        gap:5px;
+    }
+
+    .brand {
+        min-width:0;
+    }
+
+    .brand-text {
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .header-left-tools {
+        margin-left:auto !important;
+    }
+
+    .notification-panel {
+        max-width:calc(100vw - 24px);
+    }
+
+    .section {
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .hero {
+        width:100%;
+        overflow:hidden;
+    }
+
+    .hero-grid {
+        width:100%;
+    }
+
+    table {
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+}
+
+/* ================= ADMIN MOBILE SHELL ================= */
+
+.admin-mobile-toggle {
+    display:none;
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    background:#fff;
+    color:#172033;
+    cursor:pointer;
+    box-shadow:0 4px 14px rgba(15,23,42,.05);
+}
+
+.admin-sidebar-backdrop {
+    display:none;
+}
+
+@media (max-width: 900px) {
+    body.admin-body {
+        background:#f4f7fb;
+    }
+
+    .admin {
+        display:block;
+        min-height:100vh;
+    }
+
+    .admin-sidebar {
+        position:fixed !important;
+        inset:0 auto 0 0 !important;
+        width:min(310px, 86vw) !important;
+        height:100dvh;
+        max-height:none !important;
+        overflow-y:auto;
+        transform:translateX(-105%);
+        transition:transform .25s ease;
+        z-index:1200;
+        box-shadow:18px 0 45px rgba(7,13,24,.22);
+    }
+
+    body.admin-menu-open .admin-sidebar {
+        transform:translateX(0);
+    }
+
+    .admin-sidebar-backdrop {
+        position:fixed;
+        inset:0;
+        z-index:1100;
+        display:block;
+        background:rgba(7,13,24,.48);
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .2s ease;
+    }
+
+    body.admin-menu-open .admin-sidebar-backdrop {
+        opacity:1;
+        pointer-events:auto;
+    }
+
+    .admin-main {
+        margin-left:0 !important;
+        width:100%;
+    }
+
+    .adminbar {
+        position:sticky !important;
+        top:0;
+        min-height:70px;
+        padding:12px 14px !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        gap:10px !important;
+    }
+
+    .admin-mobile-toggle {
+        display:inline-flex;
+    }
+
+    .page-heading {
+        min-width:0;
+        flex:1 1 auto;
+    }
+
+    .page-heading h1 {
+        font-size:18px !important;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .adminbar-right {
+        width:auto !important;
+        flex:0 0 auto;
+        flex-wrap:nowrap !important;
+    }
+
+    .view-website-btn {
+        min-height:42px !important;
+        height:42px !important;
+        padding:0 12px !important;
+        border-radius:12px !important;
+    }
+
+    .view-website-btn span {
+        display:inline !important;
+    }
+
+    .admin-account .user-pill {
+        min-height:42px !important;
+        padding:5px 10px 5px 5px !important;
+    }
+
+    .admin-account .user-info,
+    .admin-account .user-arrow {
+        display:none !important;
+    }
+
+    .admin-main > .admincard,
+    .admin-main > div:not(.adminbar) {
+        margin-left:14px;
+        margin-right:14px;
+    }
+
+    .admincard {
+        border-radius:16px;
+    }
+
+    .admincard .head,
+    .section-head {
+        flex-wrap:wrap;
+        padding:18px;
+    }
+
+    .admincard h2 {
+        font-size:18px;
+    }
+
+    .admin-course-stats,
+    .stats-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    }
+
+    .quick-grid,
+    .management-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    }
+
+    .course-toolbar,
+    .users-filter {
+        grid-template-columns:1fr !important;
+    }
+
+    .course-table {
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .course-table-head,
+    .course-table-row {
+        min-width:700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .adminbar {
+        padding:10px 10px !important;
+        gap:7px !important;
+    }
+
+    .admin-mobile-toggle {
+        width:40px;
+        height:40px;
+        flex-basis:40px;
+    }
+
+    .page-heading small {
+        font-size:8px;
+    }
+
+    .page-heading h1 {
+        font-size:15px !important;
+    }
+
+    .view-website-btn {
+        width:42px;
+        min-width:42px;
+        padding:0 !important;
+        justify-content:center;
+    }
+
+    .view-website-btn span {
+        display:none !important;
+    }
+
+    .admin-account .user-pill {
+        width:42px;
+        min-width:42px;
+        padding:4px !important;
+        justify-content:center;
+    }
+
+    .admin-account .user-avatar {
+        width:32px;
+        height:32px;
+    }
+
+    .account-menu {
+        position:fixed;
+        top:62px;
+        right:10px;
+        width:min(250px, calc(100vw - 20px));
+    }
+
+    .admin-main > .admincard,
+    .admin-main > div:not(.adminbar) {
+        margin:12px 10px;
+    }
+
+    .admin-course-stats,
+    .stats-grid,
+    .quick-grid,
+    .management-grid {
+        grid-template-columns:1fr !important;
+    }
+
+    .course-manager-hero {
+        padding:18px !important;
+        border-radius:16px;
+    }
+
+    .category-form-grid,
+    .form-grid.two,
+    .admincard form.two,
+    .admincard .two {
+        grid-template-columns:1fr !important;
+    }
+
+    .category-admin-item {
+        grid-template-columns:48px 1fr;
+    }
+
+    .category-actions {
+        grid-column:2;
+    }
+
+    .admincard.form {
+        padding:18px;
+    }
+
+    .btn,
+    .btn.small {
+        min-height:42px;
+    }
+
+    .form-actions,
+    .actions,
+    .toolbar-actions {
+        flex-wrap:wrap;
+    }
+
+    .form-actions > *,
+    .actions > * {
+        max-width:100%;
+    }
+}
+
+/* Prevent horizontal overflow from long URLs/text */
+.admin-main,
+.admincard,
+.admincard form,
+.page-description,
+.muted {
+    min-width:0;
+    overflow-wrap:anywhere;
+}
